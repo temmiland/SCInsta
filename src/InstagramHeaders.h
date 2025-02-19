@@ -35,6 +35,9 @@
 @interface IGTabBar: UIView
 @end
 
+@interface IGUsageInsightsBlockingViewController: IGViewController
+@end
+
 @interface IGTableViewCell: UITableViewCell
 - (id)initWithReuseIdentifier:(NSString *)identifier;
 @end
@@ -218,7 +221,7 @@
 - (BOOL)isUser;
 @end
 
-@interface IGFollowController : NSObject 
+@interface IGFollowController : NSObject
 @property IGUser *user;
 @end
 

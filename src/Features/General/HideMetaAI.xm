@@ -4,6 +4,20 @@
 // Direct
 
 // Meta AI button functionality on direct search bar
+%hook IGUsageInsightsBlockingViewController
+- (void)searchBarMetaAIButtonTappedOnSearchBar:(id)arg1 {
+    if ([SCIManager getPref:@"hide_meta_ai"])
+{
+        NSLog(@"[SCInsta] Hiding meta ai: direct search bar functionality");
+
+        return;
+    }
+
+    return %orig;
+}
+%end
+
+// Meta AI button functionality on direct search bar
 %hook IGDirectInboxViewController
 - (void)searchBarMetaAIButtonTappedOnSearchBar:(id)arg1 {
     if ([SCIManager getPref:@"hide_meta_ai"])
