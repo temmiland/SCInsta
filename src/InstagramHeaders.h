@@ -35,6 +35,9 @@
 @interface IGTabBar: UIView
 @end
 
+@interface IGUsageInsightsBlockingViewController: IGViewController
+@end
+
 @interface IGTableViewCell: UITableViewCell
 - (id)initWithReuseIdentifier:(NSString *)identifier;
 @end
